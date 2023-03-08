@@ -1,0 +1,12 @@
+th{
+    background-color: aqua;
+    color: black;
+}
+
+tr:hover{
+    background-color: rgb(84, 253, 5);
+}
+
+.pro4{
+    background-color: antiquewhite;
+}

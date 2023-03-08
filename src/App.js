@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import './App.css'
+import CRUD from './CRUD'
+import CA1 from './CA1'
+import Showdata from "./Showdata" 
+import Delete from './Delete'
+import Update from "./Update" 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+    <Router>
+        <div>
+        <Switch>
+            <Route exact path="/" component={CRUD}></Route>
+            <Route exact path="/CRUD" component={CRUD}></Route> 
+            <Route exact path="/CA1" component={CA1}></Route> 
+            <Route exact path="/Showdata" component={Showdata}></Route> 
+            <Route exact path="/Update" component={Update}></Route>
+            <Route exact path="/Delete" component={Delete}></Route>  
+        </Switch>
+        </div>
+    </Router>
+    );
 }
 
-export default App;
+export default App
